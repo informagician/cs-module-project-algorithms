@@ -2,10 +2,14 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+# what should I do when finding a repeating int?
+# 
 def single_number(arr):
+    arr.sort()
     # Your code here
-
-    pass
+    for i in range(0,len(arr),2):
+        if arr[i] != arr[i+1]:
+            return arr[i]
 
 
 if __name__ == '__main__':
